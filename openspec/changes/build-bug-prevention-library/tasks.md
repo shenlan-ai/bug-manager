@@ -6,7 +6,7 @@
 
 - [x] 1.1 建立 Node.js >=22、strict TypeScript、ESM、npm workspaces 和共享 core/CLI/MCP/worker 模块；验证干净安装、lint、typecheck、build 全部成功。
 - [x] 1.2 建立 Vitest、双数据库 contract suite、集成/E2E 入口及合成夹具目录；验证无真实历史/Key 即可运行基础测试，外部条件缺失明确 skip 原因。
-- [ ] 1.3 建立 Windows/macOS/Linux CI、SQLite/PG 集成矩阵；验证每个 job 输出环境和工件，PG 不用 SQLite stub 替代。
+- [x] 1.3 建立 Windows/macOS/Linux CI、SQLite/PG 集成矩阵；验证每个 job 输出环境和工件，PG 不用 SQLite stub 替代。
 
 ## 2. 存储与事务（storage-portability）
 
@@ -83,26 +83,27 @@
 
 - [x] 11.1 在两种数据库上运行“合成历史→三种同步→分段→双路径提炼→跨项目去重→类型选择→Git 计划→模拟智能体真实提交→双报告”E2E，验证同源不重复且标准多 Bug 复用。
 - [x] 11.2 故障注入验证模型/DB 断连、磁盘不足、进程 kill、写入冲突、丢失源文件与证据缺失；记录恢复后无部分提交/来源丢失，未完成覆盖透明可见。
-- [ ] 11.3 完成 lint/typecheck/unit/integration/E2E/build 和 npm pack 内容检查；在支持的 OS 核实 CLI、MCP、worker/Skill 安装，排除真实历史、Key、DB 和私人证据。
+- [x] 11.3 完成 lint/typecheck/unit/integration/E2E/build 和 npm pack 内容检查；在支持的 OS 核实 CLI、MCP、worker/Skill 安装，排除真实历史、Key、DB 和私人证据。
 - [x] 11.4 形成 requirement→scenario→check→result→evidence 对照，列出真实模型、客户端版本及 OS 未验证项；不以 mock 代替真实端点或客户端兼容性声明。
 - [x] 11.5 确认许可证/最终包名的发布决策入口，补齐安装/模型配置/隐私/备份/升级文档；验证新用户按文档可完成本地闭环，未经明确指令不发布。
 - [ ] 11.6 运行 OpenSpec 严格全量校验并逐项核对实现证据；所有必要任务和验证满足后才归档到 openspec/specs，未完成项不得批量勾选。
 
 ## 2026-10-23 收尾证据
 
-当前 49/53 项完成。完整环境、命令退出结果和限制以 [交付验证](../../../docs/verification/2026-10-23-delivery.md) 和 [人工来源真实运行](../../../docs/verification/2026-10-23-human-origin-real-run.md) 为准。
+当前 51/53 项完成。完整环境、命令退出结果和限制以 [交付验证](../../../docs/verification/2026-10-23-delivery.md) 和 [人工来源真实运行](../../../docs/verification/2026-10-23-human-origin-real-run.md) 为准。
 
-| 任务        | Requirement / 检查与证据                                                                                                                                                                                                                              |
-| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 5.2         | HIS-001；history.test.ts 合成回归及 verify-history.mjs 两份实际授权样本，生产者 0.162.0-alpha.17.2、源 hash 不变；[真实兼容性](../../../docs/verification/2026-10-22-real-compatibility.md)                                                           |
-| 6.6         | ANA-008、HIS-001、CAT-002、API-005；合成夹具覆盖人工报告、人工引导、Agent 自写测试拒绝与伪造角色；Codex 0.163.0-alpha.10.2 脱敏会话完成清空重跑，66/66 分段有结果；[人工来源真实运行](../../../docs/verification/2026-10-23-human-origin-real-run.md) |
-| 6.3         | ANA-002；model.test.ts 错误/退路契约及指定 deepseek-flash 的 9 次有界实际请求；同上模型计数和格式退路记录                                                                                                                                             |
-| 10.1 / 10.2 | API-001/002/003/004/007；transports.test.ts 真正 SDK stdio 握手、双后端 CLI/MCP 交叉写读、分页、错误、含失败报告退出 0；Windows 全量逐项断言见交付验证                                                                                                |
-| 10.4        | API-002、DB-006、HIS-008；doctor.test.ts、worker.test.ts、worker-watch-error.test.ts 验证模板、实际不可达连接、watch 故障后的周期补扫、状态和无凭据输出                                                                                               |
-| 11.2        | ANA-006、HIS-005/006/008、CAT-007、DB-003/006、RPT-002/004；failures/concurrency/history/worker/reports 测试，包含真实 PG own-connection 终止、worker kill/restart、watcher error 故障注入；ENOSPC 为注入而非填满磁盘                                 |
-| 11.4        | [66 requirement / 115 scenario 对照](../../../docs/verification/2026-10-23-traceability.md)，关联 Windows 173 个通过断言及稳定 T001–T173；T170–T172 覆盖场景身份与受管证据目录链接越界，T173 覆盖证据读取期间截短；外部兼容性限制单独列明             |
-| 11.5        | [安装/运行/备份/升级/发布决策入口](../../../docs/operations.md)、usage 和 Skill 协议；独立 tarball 消费者初始化/安装及 workflow E2E；源码选择 MIT 并允许公开协作，npm 发布仍保持独立决定和 `private=true`                                             |
+| 任务        | Requirement / 检查与证据                                                                                                                                                                                                                                                                                                                                       |
+| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 5.2         | HIS-001；history.test.ts 合成回归及 verify-history.mjs 两份实际授权样本，生产者 0.162.0-alpha.17.2、源 hash 不变；[真实兼容性](../../../docs/verification/2026-10-22-real-compatibility.md)                                                                                                                                                                    |
+| 1.3 / 11.3  | DB-001、API-001/002/003/007；公开仓库 GitHub Actions run `39923709819` 在提交 `59a96f9` 上完成 7/7 jobs：Windows/macOS/Linux × Node.js 22/24 SQLite 矩阵和 PostgreSQL 16 全量作业；每个 SQLite job 执行静态检查、unit/integration/E2E、包内容与独立 CLI/MCP/worker/Skill 烟测，7 份工件可复核；[hosted CI](../../../docs/verification/2026-10-23-hosted-ci.md) |
+| 6.6         | ANA-008、HIS-001、CAT-002、API-005；合成夹具覆盖人工报告、人工引导、Agent 自写测试拒绝与伪造角色；Codex 0.163.0-alpha.10.2 脱敏会话完成清空重跑，66/66 分段有结果；[人工来源真实运行](../../../docs/verification/2026-10-23-human-origin-real-run.md)                                                                                                          |
+| 6.3         | ANA-002；model.test.ts 错误/退路契约及指定 deepseek-flash 的 9 次有界实际请求；同上模型计数和格式退路记录                                                                                                                                                                                                                                                      |
+| 10.1 / 10.2 | API-001/002/003/004/007；transports.test.ts 真正 SDK stdio 握手、双后端 CLI/MCP 交叉写读、分页、错误、含失败报告退出 0；Windows 全量逐项断言见交付验证                                                                                                                                                                                                         |
+| 10.4        | API-002、DB-006、HIS-008；doctor.test.ts、worker.test.ts、worker-watch-error.test.ts 验证模板、实际不可达连接、watch 故障后的周期补扫、状态和无凭据输出                                                                                                                                                                                                        |
+| 11.2        | ANA-006、HIS-005/006/008、CAT-007、DB-003/006、RPT-002/004；failures/concurrency/history/worker/reports 测试，包含真实 PG own-connection 终止、worker kill/restart、watcher error 故障注入；ENOSPC 为注入而非填满磁盘                                                                                                                                          |
+| 11.4        | [67 requirement / 122 scenario 对照](../../../docs/verification/2026-10-23-traceability.md)，关联 Windows 173 个通过断言及稳定 T001–T173；T170–T172 覆盖场景身份与受管证据目录链接越界，T173 覆盖证据读取期间截短；外部兼容性限制单独列明                                                                                                                      |
+| 11.5        | [安装/运行/备份/升级/发布决策入口](../../../docs/operations.md)、usage 和 Skill 协议；独立 tarball 消费者初始化/安装及 workflow E2E；源码选择 MIT 并允许公开协作，npm 发布仍保持独立决定和 `private=true`                                                                                                                                                      |
 
-11.3 的部分进展：当前人工来源门禁源码已在 Windows Node 24.21.0 上以真实 SQLite＋PostgreSQL 跑完 20 个文件、186 项测试，0 失败、0 跳过、进程退出 0，见 [人工来源真实运行](../../../docs/verification/2026-10-23-human-origin-real-run.md)。较早的 Windows/Debian 173 项记录、Alpine 172 项记录和包烟测仍是历史快照，不能单独替代这次源码验证；两平台 tarball 曾在独立消费者实际启动 CLI、MCP、worker 合成历史扫描及 Skill 安装，但需要针对来源门禁变更重新核验后才可作为当前包证据。另以 Debian Node 22.23.4 干净容器重放较早工作流，39/56/5 项检查通过，0 失败；该本地重放不冒充远程 GitHub Actions。Windows Codex CLI 0.163.0-alpha.10.2 的 `debug prompt-input` 曾将临时项目安装的产品 Skill 列入 model-visible Skills，安装内容 hash 与 canonical 源一致，见 [Codex Skill 客户端证据](../../../docs/verification/codex-skill-client-2026-10-22.json)。这仍不足以完成 11.3。
+公开仓库的修正后 hosted CI 已在当前来源门禁代码上完成全部 7 个作业，且每个 SQLite 作业都重新打包、独立安装并启动 CLI、MCP、worker 和产品 Skill。该远程结果补齐了 1.3 与 11.3；运行编号、提交 SHA、命令范围、工件和限制见 [hosted CI](../../../docs/verification/2026-10-23-hosted-ci.md)。本机 186 项双数据库全量记录仍作为更高覆盖深度的补充。
 
-保留未完成：1.3 的远程三 OS CI 尚未运行；5.3 的 Claude Code 真实兼容性按用户选择暂未验证；11.3 缺 macOS、Claude Code 真实客户端和桌面客户端/其他版本加载；11.6 的 strict 校验可以通过，但必要外部验证尚未齐全，因此不归档、不同步为正式基线。
+保留未完成：5.3 的 Claude Code 真实兼容性按用户选择暂未验证；11.6 的 strict 校验可以通过，但必要外部验证尚未齐全，因此不归档、不同步为正式基线。

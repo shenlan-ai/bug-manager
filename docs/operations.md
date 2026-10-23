@@ -2,9 +2,9 @@
 
 ## 首次本地使用
 
-npm 包尚未发布，但源码仓库已采用 MIT License 并允许公开使用和贡献。使用 Node.js >=22、npm，从本仓库执行 `npm ci`、`npm run build`。当前源码最新全量验证在 Windows x64 / Node 24.21.0 完成；Debian 12 x64 / Node 22.23.4、Debian 12 x64 / Node 24.22.1 和 Alpine x64 / Node 24.21.0 的通过记录来自较早源码快照，不能代替当前源码复验。需要原生 SQLite 扩展；没有当前平台的预编译包时，安装器需要该平台的 C/C++、Python 构建工具。
+npm 包尚未发布，但源码仓库已采用 MIT License 并允许公开使用和贡献。使用 Node.js >=22、npm，从本仓库执行 `npm ci`、`npm run build`。当前源码已通过 GitHub Actions 的 Windows、macOS、Linux × Node.js 22/24 SQLite 作业，以及 Ubuntu、Node.js 24、PostgreSQL 16 全量作业。Debian 与 Alpine 的较早本机记录继续保留为开发历史快照。需要原生 SQLite 扩展；没有当前平台的预编译包时，安装器需要该平台的 C/C++、Python 构建工具。
 
-依赖固定为 `better-sqlite3` 13.0.3 或兼容的后续版本。早期 12.11.1 曾在 Alpine / Node 24.21.0 的源码构建中触发 Node 24.19+ 原生清理钩子崩溃；13.x 的 N-API 路径已在同一环境干净 `npm ci` 后通过完整双数据库测试。升级 native 依赖后仍应重新安装依赖并运行 `doctor` 与项目自动测试。完整环境及 macOS 等未验证范围见 [交付验证](verification/2026-10-23-delivery.md)；分发包不包含这份仓库验证记录。
+依赖固定为 `better-sqlite3` 13.0.3 或兼容的后续版本。早期 12.11.1 曾在 Alpine / Node 24.21.0 的源码构建中触发 Node 24.19+ 原生清理钩子崩溃；13.x 的 N-API 路径已在同一环境干净 `npm ci` 后通过完整双数据库测试。升级 native 依赖后仍应重新安装依赖并运行 `doctor` 与项目自动测试。完整环境、CI 结果和剩余未验证客户端见 [交付验证](verification/2026-10-23-delivery.md) 与 [hosted CI](verification/2026-10-23-hosted-ci.md)；分发包不包含这些仓库验证记录。
 
 从仓库运行下列命令，把占位符换成明确的绝对路径；中心数据目录应位于代码仓库外：
 
@@ -53,7 +53,7 @@ Claude Code 改用 `--client claude`。客户端重新发现 Skill 的具体方�
 
 ## 源码发布与 npm 发布边界
 
-项目代号和 npm 包名为 bug-manager，源码使用 MIT License 在 GitHub 公开。`package.json` 保持 `private=true`，因此仓库公开不等于 npm 包已经发布，也防止在包名可用性、账号和完整包矩阵尚未确认时误发。
+项目代号和 npm 包名为 bug-manager，源码使用 MIT License 在 GitHub 公开。`package.json` 保持 `private=true`，因此仓库公开不等于 npm 包已经发布，也防止在最终包名、账号和明确发布决定尚未确认时误发。
 
 源码发布前至少核对：
 

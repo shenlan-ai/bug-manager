@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Node.js >=22](https://img.shields.io/badge/Node.js-%3E%3D22-339933.svg)](https://nodejs.org/)
 
-> 当前状态：核心闭环已实现并在 Windows 当前源码上通过 SQLite/PostgreSQL 验证；Claude Code 真实历史、macOS 和远程 CI 仍待取得通过证据。源码可以公开使用，npm 包尚未发布。
+> 当前状态：核心闭环已实现，当前源码已通过 Windows/macOS/Linux × Node.js 22/24 的 SQLite CI 和 PostgreSQL 16 全量测试；Claude Code 真实历史兼容性仍待验证。源码可以公开使用，npm 包尚未发布。
 
 ## 它解决什么问题
 
@@ -120,20 +120,22 @@ Skill 安装位置：
 
 ## 当前实现与验证状态
 
-当前 change 为 `build-bug-prevention-library`，49/53 项完成。剩余门禁包括远程三 OS CI、Claude Code 真实兼容性、完整客户端/平台包验证和归档前置条件。
+当前 change 为 `build-bug-prevention-library`，51/53 项完成。剩余门禁是 Claude Code 真实历史兼容性，以及全部必要证据满足后的最终核对与归档。
 
-| 项目             | 当前证据                                                                                       |
-| ---------------- | ---------------------------------------------------------------------------------------------- |
-| 当前源码自动验证 | Windows 10 x64、Node 24.21.0；真实 SQLite + PostgreSQL 16，20 文件、186 项通过，0 失败、0 跳过 |
-| Codex 真实历史   | 授权样本完成采集、66 段分析、7 Bug、6 标准、7 关联和 14 条来源链；覆盖状态为 partial           |
-| OpenAI 兼容模型  | 用户配置端点的脱敏 smoke 验证通过；不代表任意“兼容”端点都支持全部能力                          |
-| 早先跨平台快照   | Debian 与 Alpine 在较早源码快照上通过；不能代替当前源码复验                                    |
-| 尚未验证         | Claude Code 真实历史、macOS、远程 GitHub Actions、其他客户端版本和完整包矩阵                   |
-| npm              | 未发布；`package.json` 保持 `private: true`，防止在尚未确定包名与账号时误发包                  |
+| 项目             | 当前证据                                                                                                           |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------ |
+| 宿主 CI          | Windows/macOS/Linux × Node.js 22/24 的 6 个 SQLite 作业，以及 Ubuntu/Node.js 24/PostgreSQL 16 全量作业全部通过     |
+| 每平台包烟测     | 每个 SQLite 作业均完成静态检查、unit/integration/E2E、`npm pack`、独立安装、CLI、MCP、worker 与产品 Skill 安装检查 |
+| 当前源码自动验证 | Windows 10 x64、Node 24.21.0；真实 SQLite + PostgreSQL 16，20 文件、186 项通过，0 失败、0 跳过                     |
+| Codex 真实历史   | 授权样本完成采集、66 段分析、7 Bug、6 标准、7 关联和 14 条来源链；覆盖状态为 partial                               |
+| OpenAI 兼容模型  | 用户配置端点的脱敏 smoke 验证通过；不代表任意“兼容”端点都支持全部能力                                              |
+| 尚未验证         | Claude Code 真实历史、Claude Code 真实客户端加载、其他客户端版本和 npm 发布                                        |
+| npm              | 未发布；`package.json` 保持 `private: true`，防止在最终包名、账号和发布决定明确前误发包                            |
 
 证据入口：
 
 - [人工来源与真实 Codex 历史运行](docs/verification/2026-10-23-human-origin-real-run.md)
+- [Windows/macOS/Linux hosted CI](docs/verification/2026-10-23-hosted-ci.md)
 - [当前交付验证](docs/verification/2026-10-23-delivery.md)
 - [真实兼容性边界](docs/verification/2026-10-22-real-compatibility.md)
 - [规范场景追踪](docs/verification/2026-10-23-traceability.md)

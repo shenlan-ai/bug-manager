@@ -983,21 +983,23 @@ SQLite 原生备份使用在线备份 API。不要直接复制正在写入的 `.
 
 截至 2026-10-23：
 
-| 路径                           | 状态                                                                           |
-| ------------------------------ | ------------------------------------------------------------------------------ |
-| Windows 当前源码               | Node 24.21.0；SQLite + PostgreSQL 16；20 文件、186 passed、0 failed、0 skipped |
-| Codex 历史                     | 两份脱敏真实样本和一份人工来源真实运行已验证                                   |
-| 内置模型                       | 用户配置端点 smoke 通过，不承诺所有兼容端点                                    |
-| Debian / Alpine                | 较早源码快照有通过记录，不能替代当前源码复验                                   |
-| Claude Code 真实历史           | 未验证；适配器有合成格式与边界测试                                             |
-| macOS、远程三 OS CI            | 未完成                                                                         |
-| 当前包完整矩阵、其他客户端版本 | 未完成                                                                         |
-| npm                            | 未发布                                                                         |
-| OpenSpec change                | 49/53；不归档、不同步正式基线                                                  |
+| 路径                          | 状态                                                                           |
+| ----------------------------- | ------------------------------------------------------------------------------ |
+| Windows 当前源码              | Node 24.21.0；SQLite + PostgreSQL 16；20 文件、186 passed、0 failed、0 skipped |
+| Windows/macOS/Linux hosted CI | Node.js 22/24 的 6 个 SQLite 作业和 PostgreSQL 16 全量作业全部通过             |
+| 每平台独立包烟测              | 每个 SQLite 作业均验证 CLI、MCP、worker、产品 Skill 与 tarball 内容            |
+| Codex 历史                    | 两份脱敏真实样本和一份人工来源真实运行已验证                                   |
+| 内置模型                      | 用户配置端点 smoke 通过，不承诺所有兼容端点                                    |
+| Debian / Alpine               | 较早源码快照有通过记录，不能替代当前源码复验                                   |
+| Claude Code 真实历史          | 未验证；适配器有合成格式与边界测试                                             |
+| Claude Code 真实客户端加载    | 未验证；其他客户端版本也未形成兼容性矩阵                                       |
+| npm                           | 未发布                                                                         |
+| OpenSpec change               | 51/53；不归档、不同步正式基线                                                  |
 
 验证记录：
 
 - [当前交付验证](verification/2026-10-23-delivery.md)
+- [Windows/macOS/Linux hosted CI](verification/2026-10-23-hosted-ci.md)
 - [人工来源真实运行](verification/2026-10-23-human-origin-real-run.md)
 - [真实兼容性](verification/2026-10-22-real-compatibility.md)
 - [规范场景追踪](verification/2026-10-23-traceability.md)
