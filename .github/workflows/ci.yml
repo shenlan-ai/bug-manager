@@ -4,6 +4,10 @@ permissions:
   contents: read
 jobs:
   sqlite:
+    env:
+      # Use dependency prebuilds on hosted runners. Native module source
+      # rebuilds depend on runner images having a node-gyp-supported VS version.
+      npm_config_ignore_scripts: "true"
     strategy:
       fail-fast: false
       matrix:

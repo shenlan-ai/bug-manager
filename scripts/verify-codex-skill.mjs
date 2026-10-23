@@ -5,6 +5,7 @@ import {
   mkdtemp,
   mkdir,
   readFile,
+  realpath,
   rm,
   writeFile,
 } from "node:fs/promises";
@@ -63,7 +64,7 @@ async function digest(filename) {
 
 await access(cli);
 const temporary = await mkdtemp(
-  path.join(os.tmpdir(), "bug-manager-codex-skill-"),
+  path.join(await realpath(os.tmpdir()), "bug-manager-codex-skill-"),
 );
 try {
   const install = JSON.parse(

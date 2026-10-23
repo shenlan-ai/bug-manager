@@ -1,5 +1,12 @@
 import { spawn, spawnSync } from "node:child_process";
-import { mkdtemp, mkdir, readFile, writeFile, rm } from "node:fs/promises";
+import {
+  mkdtemp,
+  mkdir,
+  readFile,
+  realpath,
+  writeFile,
+  rm,
+} from "node:fs/promises";
 import path from "node:path";
 import os from "node:os";
 import { setTimeout as delay } from "node:timers/promises";
@@ -9,7 +16,9 @@ import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js"
 const npm = process.env.npm_execpath;
 if (!npm) throw new Error("Run this script with npm run test:package");
 const root = process.cwd(),
-  temporary = await mkdtemp(path.join(os.tmpdir(), "bug-manager-package-"));
+  temporary = await mkdtemp(
+    path.join(await realpath(os.tmpdir()), "bug-manager-package-"),
+  );
 function run(command, args, options = {}) {
   const result = spawnSync(command, args, { encoding: "utf8", ...options });
   if (result.status !== 0)

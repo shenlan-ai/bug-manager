@@ -4,6 +4,7 @@ import {
   mkdtemp,
   readFile,
   readdir,
+  realpath,
   rm,
   symlink,
   writeFile,
@@ -18,7 +19,9 @@ afterEach(async () => {
   if (temporary) await rm(temporary, { recursive: true, force: true });
 });
 it("installs the canonical Skill explicitly for both clients/scopes, preserves conflicts and blocks symlink escapes", async () => {
-  temporary = await mkdtemp(path.join(os.tmpdir(), "bug-manager-skills-"));
+  temporary = await mkdtemp(
+    path.join(await realpath(os.tmpdir()), "bug-manager-skills-"),
+  );
   const cli = path.resolve("dist/cli.js"),
     source = await readFile("skills/bug-manager/SKILL.md", "utf8");
   function install(client: string, scope: string, root: string) {
