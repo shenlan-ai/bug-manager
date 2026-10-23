@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-22T13:28:34.531Z",
+  "model": "deepseek-flash",
+  "protocol": "chat-completions",
+  "base_path": "/v1",
+  "platform": "win32",
+  "node": "v24.21.0",
+  "checks": [
+    {
+      "name": "structured_connectivity",
+      "status": "passed",
+      "confirmed": true,
+      "usage": {
+        "requests": 2,
+        "reserved_tokens": 8122,
+        "reported_input_tokens": 154,
+        "reported_output_tokens": 31
+      }
+    },
+    {
+      "name": "builtin_synthetic_extraction",
+      "status": "passed",
+      "job_status": "completed",
+      "bugs": 1,
+      "standards": 1,
+      "links": 1,
+      "processed": 1,
+      "usage": {
+        "requests": 3,
+        "reserved_tokens": 26763,
+        "reported_input_tokens": 4213,
+        "reported_output_tokens": 8938
+      }
+    },
+    {
+      "name": "redacted_real_source",
+      "status": "passed",
+      "has_concrete_fault": true,
+      "root_cause_confirmed": false,
+      "usage": {
+        "requests": 2,
+        "reserved_tokens": 3948,
+        "reported_input_tokens": 288,
+        "reported_output_tokens": 429
+      }
+    },
+    {
+      "name": "capability_trace",
+      "status": "passed",
+      "verified_at": "2026-10-22T13:48:08.824Z",
+      "traces": [
+        {
+          "request": 1,
+          "response_format": "json_schema",
+          "http_status": 400
+        },
+        {
+          "request": 2,
+          "response_format": "none",
+          "http_status": 200
+        }
+      ],
+      "usage": {
+        "requests": 2,
+        "reserved_tokens": 1956,
+        "reported_input_tokens": 132,
+        "reported_output_tokens": 24
+      }
+    }
+  ]
+}

@@ -1,0 +1,1199 @@
+{
+  "schema_version": 1,
+  "started_at": "2026-10-22T14:47:21.955Z",
+  "test_files": 19,
+  "total": 168,
+  "passed": 168,
+  "failed": 0,
+  "skipped_or_pending": 0,
+  "reporter_success": true,
+  "environment": {
+    "generated_at": "2026-10-22T14:51:14.691Z",
+    "platform": "linux",
+    "architecture": "x64",
+    "node": "v24.22.1",
+    "os_release": "6.18.33.2-microsoft-standard-WSL2",
+    "logical_cores": 28,
+    "host_memory_bytes": 16564051968,
+    "postgres_tests_configured": true
+  },
+  "limitation": "Sanitized assertion results only. Reporter success alone does not prove process exit 0 or absence of native/unhandled errors; consult the dated delivery record and command outcome. No raw logs, failure bodies or absolute source paths included.",
+  "checks": [
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "sqlite domain contract DB-001 initializes a real backend with the same logical schema",
+      "status": "passed",
+      "duration_ms": 75.22,
+      "check_id": "T001"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "sqlite domain contract DB-002 rolls back a failing migration and rejects newer schemas",
+      "status": "passed",
+      "duration_ms": 86.98,
+      "check_id": "T002"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "sqlite domain contract PRJ-001 preserves identity across moves and does not infer identity from remote",
+      "status": "passed",
+      "duration_ms": 80.7,
+      "check_id": "T003"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "sqlite domain contract PRJ-003 requires explicit revisions and active selected types",
+      "status": "passed",
+      "duration_ms": 124.64,
+      "check_id": "T004"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "sqlite domain contract TAX-001 preserves aliases and stable IDs on rename",
+      "status": "passed",
+      "duration_ms": 85.78,
+      "check_id": "T005"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "sqlite domain contract CAT-001 links two Bug records to one independent standard without copying severity",
+      "status": "passed",
+      "duration_ms": 59.17,
+      "check_id": "T006"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "sqlite domain contract CAT-002 preserves observed faults with unknown causes and rejects repair lifecycle fields",
+      "status": "passed",
+      "duration_ms": 54.9,
+      "check_id": "T007"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "sqlite domain contract TAX-003 filters ANY/ALL, deduplicates pagination and does not expand children",
+      "status": "passed",
+      "duration_ms": 72.21,
+      "check_id": "T008"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "sqlite domain contract TAX-004 rejects unbounded knowledge requests and searches Chinese/English tokens",
+      "status": "passed",
+      "duration_ms": 56.84,
+      "check_id": "T009"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "sqlite domain contract DED-007 retrieves Chinese paraphrases and mixed text within an explicit type scope",
+      "status": "passed",
+      "duration_ms": 59.53,
+      "check_id": "T010"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "sqlite domain contract CAT-006 preserves immutable revisions and rejects lost updates",
+      "status": "passed",
+      "duration_ms": 51.25,
+      "check_id": "T011"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "sqlite domain contract CAT-007 rolls back entity writes when a coverage reference is invalid",
+      "status": "passed",
+      "duration_ms": 56.14,
+      "check_id": "T012"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "sqlite domain contract DED-001 makes request retries idempotent and rejects key reuse for a different payload",
+      "status": "passed",
+      "duration_ms": 61.63,
+      "check_id": "T013"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "sqlite domain contract ANA-003 routes speculation and missing coverage to candidates and supports evidence confirmation",
+      "status": "passed",
+      "duration_ms": 52.15,
+      "check_id": "T014"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "sqlite domain contract CAT-003 retains independent project contexts for shared knowledge",
+      "status": "passed",
+      "duration_ms": 59.09,
+      "check_id": "T015"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "sqlite domain contract HIS-005 fences expired owners and recovers job leases",
+      "status": "passed",
+      "duration_ms": 54.74,
+      "check_id": "T016"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "sqlite domain contract TAX-004 detects changes between cursor pages rather than silently skipping reclassified items",
+      "status": "passed",
+      "duration_ms": 45.76,
+      "check_id": "T017"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "sqlite domain contract CAT-004 rejects a standard without executable steps and leaves the transaction unchanged",
+      "status": "passed",
+      "duration_ms": 55.51,
+      "check_id": "T018"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "sqlite domain contract ANA-003 rejects candidates without deleting active knowledge or losing the rejection revision",
+      "status": "passed",
+      "duration_ms": 57.75,
+      "check_id": "T019"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "sqlite domain contract CAT-001 supports several standards covering a single Bug and keeps tags separate",
+      "status": "passed",
+      "duration_ms": 53.43,
+      "check_id": "T020"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "postgres domain contract DB-001 initializes a real backend with the same logical schema",
+      "status": "passed",
+      "duration_ms": 976.79,
+      "check_id": "T021"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "postgres domain contract DB-002 rolls back a failing migration and rejects newer schemas",
+      "status": "passed",
+      "duration_ms": 1305.06,
+      "check_id": "T022"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "postgres domain contract PRJ-001 preserves identity across moves and does not infer identity from remote",
+      "status": "passed",
+      "duration_ms": 1306.67,
+      "check_id": "T023"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "postgres domain contract PRJ-003 requires explicit revisions and active selected types",
+      "status": "passed",
+      "duration_ms": 1204.19,
+      "check_id": "T024"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "postgres domain contract TAX-001 preserves aliases and stable IDs on rename",
+      "status": "passed",
+      "duration_ms": 1182.79,
+      "check_id": "T025"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "postgres domain contract CAT-001 links two Bug records to one independent standard without copying severity",
+      "status": "passed",
+      "duration_ms": 1606.58,
+      "check_id": "T026"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "postgres domain contract CAT-002 preserves observed faults with unknown causes and rejects repair lifecycle fields",
+      "status": "passed",
+      "duration_ms": 1310.56,
+      "check_id": "T027"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "postgres domain contract TAX-003 filters ANY/ALL, deduplicates pagination and does not expand children",
+      "status": "passed",
+      "duration_ms": 1422.78,
+      "check_id": "T028"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "postgres domain contract TAX-004 rejects unbounded knowledge requests and searches Chinese/English tokens",
+      "status": "passed",
+      "duration_ms": 1151.95,
+      "check_id": "T029"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "postgres domain contract DED-007 retrieves Chinese paraphrases and mixed text within an explicit type scope",
+      "status": "passed",
+      "duration_ms": 1284.09,
+      "check_id": "T030"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "postgres domain contract CAT-006 preserves immutable revisions and rejects lost updates",
+      "status": "passed",
+      "duration_ms": 1118.21,
+      "check_id": "T031"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "postgres domain contract CAT-007 rolls back entity writes when a coverage reference is invalid",
+      "status": "passed",
+      "duration_ms": 1065.21,
+      "check_id": "T032"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "postgres domain contract DED-001 makes request retries idempotent and rejects key reuse for a different payload",
+      "status": "passed",
+      "duration_ms": 1184.77,
+      "check_id": "T033"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "postgres domain contract ANA-003 routes speculation and missing coverage to candidates and supports evidence confirmation",
+      "status": "passed",
+      "duration_ms": 1301.16,
+      "check_id": "T034"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "postgres domain contract CAT-003 retains independent project contexts for shared knowledge",
+      "status": "passed",
+      "duration_ms": 1254.57,
+      "check_id": "T035"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "postgres domain contract HIS-005 fences expired owners and recovers job leases",
+      "status": "passed",
+      "duration_ms": 2659.27,
+      "check_id": "T036"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "postgres domain contract TAX-004 detects changes between cursor pages rather than silently skipping reclassified items",
+      "status": "passed",
+      "duration_ms": 1451.4,
+      "check_id": "T037"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "postgres domain contract CAT-004 rejects a standard without executable steps and leaves the transaction unchanged",
+      "status": "passed",
+      "duration_ms": 1193.18,
+      "check_id": "T038"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "postgres domain contract ANA-003 rejects candidates without deleting active knowledge or losing the rejection revision",
+      "status": "passed",
+      "duration_ms": 1362.03,
+      "check_id": "T039"
+    },
+    {
+      "file": "tests/contracts/catalog.test.ts",
+      "name": "postgres domain contract CAT-001 supports several standards covering a single Bug and keeps tags separate",
+      "status": "passed",
+      "duration_ms": 1447.65,
+      "check_id": "T040"
+    },
+    {
+      "file": "tests/integration/application.test.ts",
+      "name": "uses the shared application contract for structured errors and no-Key type maintenance",
+      "status": "passed",
+      "duration_ms": 143.69,
+      "check_id": "T041"
+    },
+    {
+      "file": "tests/integration/archive.test.ts",
+      "name": "DB-004 creates a consistent native SQLite backup without overwriting a destination",
+      "status": "passed",
+      "duration_ms": 467.37,
+      "check_id": "T042"
+    },
+    {
+      "file": "tests/integration/archive.test.ts",
+      "name": "DB-004 exports sqlite and restores into postgres with identities, hierarchy, versions, links and evidence",
+      "status": "passed",
+      "duration_ms": 4531.94,
+      "check_id": "T043"
+    },
+    {
+      "file": "tests/integration/archive.test.ts",
+      "name": "DB-004 exports postgres and restores into sqlite with identities, hierarchy, versions, links and evidence",
+      "status": "passed",
+      "duration_ms": 3860.32,
+      "check_id": "T044"
+    },
+    {
+      "file": "tests/integration/archive.test.ts",
+      "name": "DB-004 rejects a tampered archive and rolls back partially inserted rows",
+      "status": "passed",
+      "duration_ms": 510.07,
+      "check_id": "T045"
+    },
+    {
+      "file": "tests/integration/changes.test.ts",
+      "name": "sqlite immutable change capture PLN-001 freezes staged renames, unstaged deletions, Unicode untracked metadata and bounded diff without modifying source",
+      "status": "passed",
+      "duration_ms": 573.06,
+      "check_id": "T046"
+    },
+    {
+      "file": "tests/integration/changes.test.ts",
+      "name": "sqlite immutable change capture PLN-001 captures commit ranges and merge bases with resolved SHAs; refuses invalid refs",
+      "status": "passed",
+      "duration_ms": 313.58,
+      "check_id": "T047"
+    },
+    {
+      "file": "tests/integration/changes.test.ts",
+      "name": "sqlite immutable change capture PLN-001 exposes diff/file truncation, redacts snippets and supports explicit non-Git changes",
+      "status": "passed",
+      "duration_ms": 224.5,
+      "check_id": "T048"
+    },
+    {
+      "file": "tests/integration/changes.test.ts",
+      "name": "postgres immutable change capture PLN-001 freezes staged renames, unstaged deletions, Unicode untracked metadata and bounded diff without modifying source",
+      "status": "passed",
+      "duration_ms": 2470.36,
+      "check_id": "T049"
+    },
+    {
+      "file": "tests/integration/changes.test.ts",
+      "name": "postgres immutable change capture PLN-001 captures commit ranges and merge bases with resolved SHAs; refuses invalid refs",
+      "status": "passed",
+      "duration_ms": 4228.56,
+      "check_id": "T050"
+    },
+    {
+      "file": "tests/integration/changes.test.ts",
+      "name": "postgres immutable change capture PLN-001 exposes diff/file truncation, redacts snippets and supports explicit non-Git changes",
+      "status": "passed",
+      "duration_ms": 7851.54,
+      "check_id": "T051"
+    },
+    {
+      "file": "tests/integration/concurrency.test.ts",
+      "name": "sqlite independent processes DED-006 independently submits two proposals from stale retrievals and rechecks before activation",
+      "status": "passed",
+      "duration_ms": 563.02,
+      "check_id": "T052"
+    },
+    {
+      "file": "tests/integration/concurrency.test.ts",
+      "name": "sqlite independent processes HIS-002/HIS-005 concurrently collects manual/lazy/background work and fences analysis across processes",
+      "status": "passed",
+      "duration_ms": 1518.44,
+      "check_id": "T053"
+    },
+    {
+      "file": "tests/integration/concurrency.test.ts",
+      "name": "sqlite independent processes serializes idempotent replays and fences replaced job owners across process boundaries",
+      "status": "passed",
+      "duration_ms": 1454.85,
+      "check_id": "T054"
+    },
+    {
+      "file": "tests/integration/concurrency.test.ts",
+      "name": "postgres independent processes DED-006 independently submits two proposals from stale retrievals and rechecks before activation",
+      "status": "passed",
+      "duration_ms": 1661.27,
+      "check_id": "T055"
+    },
+    {
+      "file": "tests/integration/concurrency.test.ts",
+      "name": "postgres independent processes HIS-002/HIS-005 concurrently collects manual/lazy/background work and fences analysis across processes",
+      "status": "passed",
+      "duration_ms": 2974.84,
+      "check_id": "T056"
+    },
+    {
+      "file": "tests/integration/concurrency.test.ts",
+      "name": "postgres independent processes serializes idempotent replays and fences replaced job owners across process boundaries",
+      "status": "passed",
+      "duration_ms": 2551.19,
+      "check_id": "T057"
+    },
+    {
+      "file": "tests/integration/failures.test.ts",
+      "name": "DB-003/006 rolls back knowledge and idempotency on an actual PostgreSQL connection termination and retries cleanly",
+      "status": "passed",
+      "duration_ms": 3361.39,
+      "check_id": "T058"
+    },
+    {
+      "file": "tests/integration/failures.test.ts",
+      "name": "DB-006 returns safe actionable resource/connection diagnostics without exposing supplied driver text",
+      "status": "passed",
+      "duration_ms": 1.08,
+      "check_id": "T059"
+    },
+    {
+      "file": "tests/integration/failures.test.ts",
+      "name": "DB-002 isolates concurrent PostgreSQL initialization and introspection by the configured schema",
+      "status": "passed",
+      "duration_ms": 3026.39,
+      "check_id": "T060"
+    },
+    {
+      "file": "tests/integration/history.test.ts",
+      "name": "sqlite history/analysis transaction HIS-005 replays a completed resume response without claiming the next batch",
+      "status": "passed",
+      "duration_ms": 122.91,
+      "check_id": "T061"
+    },
+    {
+      "file": "tests/integration/history.test.ts",
+      "name": "sqlite history/analysis transaction HIS-005 resumes an interrupted public request after its work lease expires",
+      "status": "passed",
+      "duration_ms": 66.17,
+      "check_id": "T062"
+    },
+    {
+      "file": "tests/integration/history.test.ts",
+      "name": "sqlite history/analysis transaction HIS-007 preserves discovery gaps across pages and clears them only after a full rescan",
+      "status": "passed",
+      "duration_ms": 83.82,
+      "check_id": "T063"
+    },
+    {
+      "file": "tests/integration/history.test.ts",
+      "name": "sqlite history/analysis transaction HIS-007 checks missing-source coverage beyond the first thousand sessions",
+      "status": "passed",
+      "duration_ms": 234.49,
+      "check_id": "T064"
+    },
+    {
+      "file": "tests/integration/history.test.ts",
+      "name": "sqlite history/analysis transaction HIS-003 exposes both sides of a boundary and preserves summary dependencies",
+      "status": "passed",
+      "duration_ms": 89.59,
+      "check_id": "T065"
+    },
+    {
+      "file": "tests/integration/history.test.ts",
+      "name": "sqlite history/analysis transaction PRJ-002 attributes each segment using its own directory evidence when a session changes projects",
+      "status": "passed",
+      "duration_ms": 86.58,
+      "check_id": "T066"
+    },
+    {
+      "file": "tests/integration/history.test.ts",
+      "name": "sqlite history/analysis transaction HIS-006 paginates discovery deterministically, advances over oversized corruption, and exposes every gap",
+      "status": "passed",
+      "duration_ms": 115.54,
+      "check_id": "T067"
+    },
+    {
+      "file": "tests/integration/history.test.ts",
+      "name": "sqlite history/analysis transaction ANA-007 creates explicit analysis versions, preserves earlier results, and applies new exclusions before context access",
+      "status": "passed",
+      "duration_ms": 92.45,
+      "check_id": "T068"
+    },
+    {
+      "file": "tests/integration/history.test.ts",
+      "name": "sqlite history/analysis transaction HIS-004 distinguishes collection from analysis and commits no-findings exactly once",
+      "status": "passed",
+      "duration_ms": 135.86,
+      "check_id": "T069"
+    },
+    {
+      "file": "tests/integration/history.test.ts",
+      "name": "sqlite history/analysis transaction HIS-006 resumes UTF-8 tails, detects interior replacement, retains old segments and deduplicates replay",
+      "status": "passed",
+      "duration_ms": 95.08,
+      "check_id": "T070"
+    },
+    {
+      "file": "tests/integration/history.test.ts",
+      "name": "sqlite history/analysis transaction HIS-002 recognizes archive movement across roots without duplicate sessions or segments",
+      "status": "passed",
+      "duration_ms": 64.54,
+      "check_id": "T071"
+    },
+    {
+      "file": "tests/integration/history.test.ts",
+      "name": "sqlite history/analysis transaction ANA-004 excludes sessions without persisting contents and redacts source/knowledge/audit",
+      "status": "passed",
+      "duration_ms": 99.72,
+      "check_id": "T072"
+    },
+    {
+      "file": "tests/integration/history.test.ts",
+      "name": "sqlite history/analysis transaction ANA-001 atomically creates a Bug and an independently reusable standard; invalid links roll back progress",
+      "status": "passed",
+      "duration_ms": 123.15,
+      "check_id": "T073"
+    },
+    {
+      "file": "tests/integration/history.test.ts",
+      "name": "sqlite history/analysis transaction HIS-005 fences late owners and recovers abandoned analysis leases",
+      "status": "passed",
+      "duration_ms": 91.06,
+      "check_id": "T074"
+    },
+    {
+      "file": "tests/integration/history.test.ts",
+      "name": "sqlite history/analysis transaction DED-006 rechecks concurrent candidates and routes the second new proposal to confirmation",
+      "status": "passed",
+      "duration_ms": 107.82,
+      "check_id": "T075"
+    },
+    {
+      "file": "tests/integration/history.test.ts",
+      "name": "sqlite history/analysis transaction DED-004 exposes truncated summaries and cursor follow-up without treating a first page as global uniqueness",
+      "status": "passed",
+      "duration_ms": 68.7,
+      "check_id": "T076"
+    },
+    {
+      "file": "tests/integration/history.test.ts",
+      "name": "sqlite history/analysis transaction HIS-007 retains source-unavailable coverage while serving the redacted excerpt",
+      "status": "passed",
+      "duration_ms": 68.73,
+      "check_id": "T077"
+    },
+    {
+      "file": "tests/integration/history.test.ts",
+      "name": "postgres history/analysis transaction HIS-005 replays a completed resume response without claiming the next batch",
+      "status": "passed",
+      "duration_ms": 1608.4,
+      "check_id": "T078"
+    },
+    {
+      "file": "tests/integration/history.test.ts",
+      "name": "postgres history/analysis transaction HIS-005 resumes an interrupted public request after its work lease expires",
+      "status": "passed",
+      "duration_ms": 1308.69,
+      "check_id": "T079"
+    },
+    {
+      "file": "tests/integration/history.test.ts",
+      "name": "postgres history/analysis transaction HIS-007 preserves discovery gaps across pages and clears them only after a full rescan",
+      "status": "passed",
+      "duration_ms": 1381.83,
+      "check_id": "T080"
+    },
+    {
+      "file": "tests/integration/history.test.ts",
+      "name": "postgres history/analysis transaction HIS-007 checks missing-source coverage beyond the first thousand sessions",
+      "status": "passed",
+      "duration_ms": 3908.32,
+      "check_id": "T081"
+    },
+    {
+      "file": "tests/integration/history.test.ts",
+      "name": "postgres history/analysis transaction HIS-003 exposes both sides of a boundary and preserves summary dependencies",
+      "status": "passed",
+      "duration_ms": 1191.34,
+      "check_id": "T082"
+    },
+    {
+      "file": "tests/integration/history.test.ts",
+      "name": "postgres history/analysis transaction PRJ-002 attributes each segment using its own directory evidence when a session changes projects",
+      "status": "passed",
+      "duration_ms": 1305.51,
+      "check_id": "T083"
+    },
+    {
+      "file": "tests/integration/history.test.ts",
+      "name": "postgres history/analysis transaction HIS-006 paginates discovery deterministically, advances over oversized corruption, and exposes every gap",
+      "status": "passed",
+      "duration_ms": 1676.12,
+      "check_id": "T084"
+    },
+    {
+      "file": "tests/integration/history.test.ts",
+      "name": "postgres history/analysis transaction ANA-007 creates explicit analysis versions, preserves earlier results, and applies new exclusions before context access",
+      "status": "passed",
+      "duration_ms": 1006.4,
+      "check_id": "T085"
+    },
+    {
+      "file": "tests/integration/history.test.ts",
+      "name": "postgres history/analysis transaction HIS-004 distinguishes collection from analysis and commits no-findings exactly once",
+      "status": "passed",
+      "duration_ms": 1181.54,
+      "check_id": "T086"
+    },
+    {
+      "file": "tests/integration/history.test.ts",
+      "name": "postgres history/analysis transaction HIS-006 resumes UTF-8 tails, detects interior replacement, retains old segments and deduplicates replay",
+      "status": "passed",
+      "duration_ms": 1199.62,
+      "check_id": "T087"
+    },
+    {
+      "file": "tests/integration/history.test.ts",
+      "name": "postgres history/analysis transaction HIS-002 recognizes archive movement across roots without duplicate sessions or segments",
+      "status": "passed",
+      "duration_ms": 993.16,
+      "check_id": "T088"
+    },
+    {
+      "file": "tests/integration/history.test.ts",
+      "name": "postgres history/analysis transaction ANA-004 excludes sessions without persisting contents and redacts source/knowledge/audit",
+      "status": "passed",
+      "duration_ms": 1258.35,
+      "check_id": "T089"
+    },
+    {
+      "file": "tests/integration/history.test.ts",
+      "name": "postgres history/analysis transaction ANA-001 atomically creates a Bug and an independently reusable standard; invalid links roll back progress",
+      "status": "passed",
+      "duration_ms": 1627.11,
+      "check_id": "T090"
+    },
+    {
+      "file": "tests/integration/history.test.ts",
+      "name": "postgres history/analysis transaction HIS-005 fences late owners and recovers abandoned analysis leases",
+      "status": "passed",
+      "duration_ms": 1171.96,
+      "check_id": "T091"
+    },
+    {
+      "file": "tests/integration/history.test.ts",
+      "name": "postgres history/analysis transaction DED-006 rechecks concurrent candidates and routes the second new proposal to confirmation",
+      "status": "passed",
+      "duration_ms": 1223.37,
+      "check_id": "T092"
+    },
+    {
+      "file": "tests/integration/history.test.ts",
+      "name": "postgres history/analysis transaction DED-004 exposes truncated summaries and cursor follow-up without treating a first page as global uniqueness",
+      "status": "passed",
+      "duration_ms": 1141.77,
+      "check_id": "T093"
+    },
+    {
+      "file": "tests/integration/history.test.ts",
+      "name": "postgres history/analysis transaction HIS-007 retains source-unavailable coverage while serving the redacted excerpt",
+      "status": "passed",
+      "duration_ms": 1340.37,
+      "check_id": "T094"
+    },
+    {
+      "file": "tests/integration/merges.test.ts",
+      "name": "sqlite conservative knowledge merges DED-005 preserves independent types, sources, coverage, redirects and frozen old revisions",
+      "status": "passed",
+      "duration_ms": 193.93,
+      "check_id": "T095"
+    },
+    {
+      "file": "tests/integration/merges.test.ts",
+      "name": "sqlite conservative knowledge merges DED-005 merging Bugs retains both project occurrences and independent covering standards",
+      "status": "passed",
+      "duration_ms": 122.43,
+      "check_id": "T096"
+    },
+    {
+      "file": "tests/integration/merges.test.ts",
+      "name": "sqlite conservative knowledge merges DED-005 keeps rating/expectation conflicts pending; corrected knowledge can explicitly confirm the candidate",
+      "status": "passed",
+      "duration_ms": 100.72,
+      "check_id": "T097"
+    },
+    {
+      "file": "tests/integration/merges.test.ts",
+      "name": "sqlite conservative knowledge merges CAT-006 rejects lost coverage updates and retains every accepted relationship revision",
+      "status": "passed",
+      "duration_ms": 77.79,
+      "check_id": "T098"
+    },
+    {
+      "file": "tests/integration/merges.test.ts",
+      "name": "postgres conservative knowledge merges DED-005 preserves independent types, sources, coverage, redirects and frozen old revisions",
+      "status": "passed",
+      "duration_ms": 2135.44,
+      "check_id": "T099"
+    },
+    {
+      "file": "tests/integration/merges.test.ts",
+      "name": "postgres conservative knowledge merges DED-005 merging Bugs retains both project occurrences and independent covering standards",
+      "status": "passed",
+      "duration_ms": 1805.69,
+      "check_id": "T100"
+    },
+    {
+      "file": "tests/integration/merges.test.ts",
+      "name": "postgres conservative knowledge merges DED-005 keeps rating/expectation conflicts pending; corrected knowledge can explicitly confirm the candidate",
+      "status": "passed",
+      "duration_ms": 1898.55,
+      "check_id": "T101"
+    },
+    {
+      "file": "tests/integration/merges.test.ts",
+      "name": "postgres conservative knowledge merges CAT-006 rejects lost coverage updates and retains every accepted relationship revision",
+      "status": "passed",
+      "duration_ms": 2199.56,
+      "check_id": "T102"
+    },
+    {
+      "file": "tests/integration/model.test.ts",
+      "name": "OpenAI-compatible HTTP contract (synthetic endpoint, not real-model evidence) ANA-002 falls back from unsupported schema output, validates JSON, and redacts outgoing data",
+      "status": "passed",
+      "duration_ms": 68.97,
+      "check_id": "T103"
+    },
+    {
+      "file": "tests/integration/model.test.ts",
+      "name": "OpenAI-compatible HTTP contract (synthetic endpoint, not real-model evidence) ANA-006 retries malformed output within budget and rejects extra/schema-invalid fields",
+      "status": "passed",
+      "duration_ms": 28.98,
+      "check_id": "T104"
+    },
+    {
+      "file": "tests/integration/model.test.ts",
+      "name": "OpenAI-compatible HTTP contract (synthetic endpoint, not real-model evidence) ANA-002 distinguishes authentication, rate limits, and network timeout without echoing remote errors",
+      "status": "passed",
+      "duration_ms": 291.56,
+      "check_id": "T105"
+    },
+    {
+      "file": "tests/integration/model.test.ts",
+      "name": "OpenAI-compatible HTTP contract (synthetic endpoint, not real-model evidence) ANA-006 reserves budgets before sending a request and supports Responses envelopes",
+      "status": "passed",
+      "duration_ms": 6.34,
+      "check_id": "T106"
+    },
+    {
+      "file": "tests/integration/model.test.ts",
+      "name": "sqlite built-in and external equivalence PLN-004 bounds model relevance to a frozen page, supports replay and preserves I0 inclusion",
+      "status": "passed",
+      "duration_ms": 135.48,
+      "check_id": "T107"
+    },
+    {
+      "file": "tests/integration/model.test.ts",
+      "name": "sqlite built-in and external equivalence ANA-001 commits the same proposal rules through the real HTTP client and saves project types explicitly",
+      "status": "passed",
+      "duration_ms": 203.2,
+      "check_id": "T108"
+    },
+    {
+      "file": "tests/integration/model.test.ts",
+      "name": "sqlite built-in and external equivalence ANA-006 keeps budget-limited segments pending and never advances analysis completion",
+      "status": "passed",
+      "duration_ms": 85.55,
+      "check_id": "T109"
+    },
+    {
+      "file": "tests/integration/model.test.ts",
+      "name": "postgres built-in and external equivalence PLN-004 bounds model relevance to a frozen page, supports replay and preserves I0 inclusion",
+      "status": "passed",
+      "duration_ms": 1144.71,
+      "check_id": "T110"
+    },
+    {
+      "file": "tests/integration/model.test.ts",
+      "name": "postgres built-in and external equivalence ANA-001 commits the same proposal rules through the real HTTP client and saves project types explicitly",
+      "status": "passed",
+      "duration_ms": 1782.76,
+      "check_id": "T111"
+    },
+    {
+      "file": "tests/integration/model.test.ts",
+      "name": "postgres built-in and external equivalence ANA-006 keeps budget-limited segments pending and never advances analysis completion",
+      "status": "passed",
+      "duration_ms": 1214.65,
+      "check_id": "T112"
+    },
+    {
+      "file": "tests/integration/plans.test.ts",
+      "name": "sqlite frozen acceptance plans PLN-002/003 includes each in-scope I0 once despite a skip proposal or unresolved parameters",
+      "status": "passed",
+      "duration_ms": 137.84,
+      "check_id": "T113"
+    },
+    {
+      "file": "tests/integration/plans.test.ts",
+      "name": "sqlite frozen acceptance plans PLN-005/006 freezes versions, type settings and parameters while later plans use explicit updates",
+      "status": "passed",
+      "duration_ms": 135.33,
+      "check_id": "T114"
+    },
+    {
+      "file": "tests/integration/plans.test.ts",
+      "name": "sqlite frozen acceptance plans PLN-004 refines explicit relevance judgements into a new plan without changing the frozen basis",
+      "status": "passed",
+      "duration_ms": 91.53,
+      "check_id": "T115"
+    },
+    {
+      "file": "tests/integration/plans.test.ts",
+      "name": "sqlite frozen acceptance plans PLN-002/006 rejects stale/out-of-scope decisions, wrong parameter types and empty project type configuration atomically",
+      "status": "passed",
+      "duration_ms": 93.81,
+      "check_id": "T116"
+    },
+    {
+      "file": "tests/integration/plans.test.ts",
+      "name": "sqlite frozen acceptance plans HIS-007/PLN-002 shows collected but unanalyzed history and budget-limited lazy sync without requiring a Key",
+      "status": "passed",
+      "duration_ms": 86.29,
+      "check_id": "T117"
+    },
+    {
+      "file": "tests/integration/plans.test.ts",
+      "name": "sqlite frozen acceptance plans PLN-006 paginates more than 200 standards inside one consistent database snapshot under concurrent updates",
+      "status": "passed",
+      "duration_ms": 387.61,
+      "check_id": "T118"
+    },
+    {
+      "file": "tests/integration/plans.test.ts",
+      "name": "postgres frozen acceptance plans PLN-002/003 includes each in-scope I0 once despite a skip proposal or unresolved parameters",
+      "status": "passed",
+      "duration_ms": 1331.93,
+      "check_id": "T119"
+    },
+    {
+      "file": "tests/integration/plans.test.ts",
+      "name": "postgres frozen acceptance plans PLN-005/006 freezes versions, type settings and parameters while later plans use explicit updates",
+      "status": "passed",
+      "duration_ms": 1224.4,
+      "check_id": "T120"
+    },
+    {
+      "file": "tests/integration/plans.test.ts",
+      "name": "postgres frozen acceptance plans PLN-004 refines explicit relevance judgements into a new plan without changing the frozen basis",
+      "status": "passed",
+      "duration_ms": 1173.77,
+      "check_id": "T121"
+    },
+    {
+      "file": "tests/integration/plans.test.ts",
+      "name": "postgres frozen acceptance plans PLN-002/006 rejects stale/out-of-scope decisions, wrong parameter types and empty project type configuration atomically",
+      "status": "passed",
+      "duration_ms": 1188.15,
+      "check_id": "T122"
+    },
+    {
+      "file": "tests/integration/plans.test.ts",
+      "name": "postgres frozen acceptance plans HIS-007/PLN-002 shows collected but unanalyzed history and budget-limited lazy sync without requiring a Key",
+      "status": "passed",
+      "duration_ms": 1249.07,
+      "check_id": "T123"
+    },
+    {
+      "file": "tests/integration/plans.test.ts",
+      "name": "postgres frozen acceptance plans PLN-006 paginates more than 200 standards inside one consistent database snapshot under concurrent updates",
+      "status": "passed",
+      "duration_ms": 6013.49,
+      "check_id": "T124"
+    },
+    {
+      "file": "tests/integration/reports.test.ts",
+      "name": "sqlite executor declarations and human reports RPT-001/002 rejects missing evidence, wrong frozen ownership and malformed observations without replacing valid attempts",
+      "status": "passed",
+      "duration_ms": 109.13,
+      "check_id": "T125"
+    },
+    {
+      "file": "tests/integration/reports.test.ts",
+      "name": "sqlite executor declarations and human reports RPT-003 appends attempts, preserves logical retries and binds one execution to one project version",
+      "status": "passed",
+      "duration_ms": 96.26,
+      "check_id": "T126"
+    },
+    {
+      "file": "tests/integration/reports.test.ts",
+      "name": "sqlite executor declarations and human reports RPT-006 preserves all-inapplicable declarations and applies failure/blocking precedence without counting them as passes",
+      "status": "passed",
+      "duration_ms": 91.25,
+      "check_id": "T127"
+    },
+    {
+      "file": "tests/integration/reports.test.ts",
+      "name": "sqlite executor declarations and human reports DB-006 keeps rejected disk-full evidence writes out of result transactions and recovers on retry",
+      "status": "passed",
+      "duration_ms": 61.9,
+      "check_id": "T128"
+    },
+    {
+      "file": "tests/integration/reports.test.ts",
+      "name": "sqlite executor declarations and human reports RPT-003/005 freezes explicit/latest valid result sets and retains old report definitions after a knowledge merge",
+      "status": "passed",
+      "duration_ms": 102.31,
+      "check_id": "T129"
+    },
+    {
+      "file": "tests/integration/reports.test.ts",
+      "name": "sqlite executor declarations and human reports RPT-002/004/007 keeps semantically dubious declarations for human review and exports the same Markdown/JSON snapshot",
+      "status": "passed",
+      "duration_ms": 136.2,
+      "check_id": "T130"
+    },
+    {
+      "file": "tests/integration/reports.test.ts",
+      "name": "sqlite executor declarations and human reports RPT-004 separates submission availability from missing export objects and never fetches external references",
+      "status": "passed",
+      "duration_ms": 81.11,
+      "check_id": "T131"
+    },
+    {
+      "file": "tests/integration/reports.test.ts",
+      "name": "postgres executor declarations and human reports RPT-001/002 rejects missing evidence, wrong frozen ownership and malformed observations without replacing valid attempts",
+      "status": "passed",
+      "duration_ms": 1244.38,
+      "check_id": "T132"
+    },
+    {
+      "file": "tests/integration/reports.test.ts",
+      "name": "postgres executor declarations and human reports RPT-003 appends attempts, preserves logical retries and binds one execution to one project version",
+      "status": "passed",
+      "duration_ms": 1454.83,
+      "check_id": "T133"
+    },
+    {
+      "file": "tests/integration/reports.test.ts",
+      "name": "postgres executor declarations and human reports RPT-006 preserves all-inapplicable declarations and applies failure/blocking precedence without counting them as passes",
+      "status": "passed",
+      "duration_ms": 1761.4,
+      "check_id": "T134"
+    },
+    {
+      "file": "tests/integration/reports.test.ts",
+      "name": "postgres executor declarations and human reports DB-006 keeps rejected disk-full evidence writes out of result transactions and recovers on retry",
+      "status": "passed",
+      "duration_ms": 1207.03,
+      "check_id": "T135"
+    },
+    {
+      "file": "tests/integration/reports.test.ts",
+      "name": "postgres executor declarations and human reports RPT-003/005 freezes explicit/latest valid result sets and retains old report definitions after a knowledge merge",
+      "status": "passed",
+      "duration_ms": 1321.83,
+      "check_id": "T136"
+    },
+    {
+      "file": "tests/integration/reports.test.ts",
+      "name": "postgres executor declarations and human reports RPT-002/004/007 keeps semantically dubious declarations for human review and exports the same Markdown/JSON snapshot",
+      "status": "passed",
+      "duration_ms": 1349.05,
+      "check_id": "T137"
+    },
+    {
+      "file": "tests/integration/reports.test.ts",
+      "name": "postgres executor declarations and human reports RPT-004 separates submission availability from missing export objects and never fetches external references",
+      "status": "passed",
+      "duration_ms": 1303.24,
+      "check_id": "T138"
+    },
+    {
+      "file": "tests/integration/vectors.test.ts",
+      "name": "sqlite optional vectors DED-002/007 isolates model, dimensions and version without touching knowledge or requiring vectors for full-text",
+      "status": "passed",
+      "duration_ms": 1053.65,
+      "check_id": "T139"
+    },
+    {
+      "file": "tests/integration/vectors.test.ts",
+      "name": "postgres optional vectors DED-002/007 isolates model, dimensions and version without touching knowledge or requiring vectors for full-text",
+      "status": "passed",
+      "duration_ms": 7186.69,
+      "check_id": "T140"
+    },
+    {
+      "file": "tests/integration/worker.test.ts",
+      "name": "sqlite history worker HIS-005/HIS-008 recovers unfinished collection after a real worker kill and restart",
+      "status": "passed",
+      "duration_ms": 1389.84,
+      "check_id": "T141"
+    },
+    {
+      "file": "tests/integration/worker.test.ts",
+      "name": "sqlite history worker HIS-008 observes real filesystem notifications without waiting for the periodic scan",
+      "status": "passed",
+      "duration_ms": 230.87,
+      "check_id": "T142"
+    },
+    {
+      "file": "tests/integration/worker.test.ts",
+      "name": "sqlite history worker HIS-008 periodic reconciliation discovers missed watch events; manual/lazy replay is idempotent and shutdown releases liveness",
+      "status": "passed",
+      "duration_ms": 225.32,
+      "check_id": "T143"
+    },
+    {
+      "file": "tests/integration/worker.test.ts",
+      "name": "postgres history worker HIS-005/HIS-008 recovers unfinished collection after a real worker kill and restart",
+      "status": "passed",
+      "duration_ms": 7563.53,
+      "check_id": "T144"
+    },
+    {
+      "file": "tests/integration/worker.test.ts",
+      "name": "postgres history worker HIS-008 observes real filesystem notifications without waiting for the periodic scan",
+      "status": "passed",
+      "duration_ms": 2995.99,
+      "check_id": "T145"
+    },
+    {
+      "file": "tests/integration/worker.test.ts",
+      "name": "postgres history worker HIS-008 periodic reconciliation discovers missed watch events; manual/lazy replay is idempotent and shutdown releases liveness",
+      "status": "passed",
+      "duration_ms": 3286.07,
+      "check_id": "T146"
+    },
+    {
+      "file": "tests/e2e/doctor.test.ts",
+      "name": "API-002/DB-006 prints valid templates, diagnoses unavailable services and missing model keys without exposing credentials",
+      "status": "passed",
+      "duration_ms": 3481.58,
+      "check_id": "T147"
+    },
+    {
+      "file": "tests/e2e/skill.test.ts",
+      "name": "installs the canonical Skill explicitly for both clients/scopes, preserves conflicts and blocks symlink escapes",
+      "status": "passed",
+      "duration_ms": 4938.14,
+      "check_id": "T148"
+    },
+    {
+      "file": "tests/e2e/transports.test.ts",
+      "name": "sqlite: CLI and real MCP share frozen plans, append-only results and failed report exports",
+      "status": "passed",
+      "duration_ms": 3211.8,
+      "check_id": "T149"
+    },
+    {
+      "file": "tests/e2e/transports.test.ts",
+      "name": "postgres: CLI and real MCP share frozen plans, append-only results and failed report exports",
+      "status": "passed",
+      "duration_ms": 5057.47,
+      "check_id": "T150"
+    },
+    {
+      "file": "tests/e2e/transports.test.ts",
+      "name": "initializes via CLI then maintains and reads the same data through real MCP stdio",
+      "status": "passed",
+      "duration_ms": 1669.09,
+      "check_id": "T151"
+    },
+    {
+      "file": "tests/e2e/workflow.test.ts",
+      "name": "sqlite: two histories, three sync modes, both extraction paths, shared prevention, Git and executed evidence reach one human report",
+      "status": "passed",
+      "duration_ms": 357.99,
+      "check_id": "T152"
+    },
+    {
+      "file": "tests/e2e/workflow.test.ts",
+      "name": "postgres: two histories, three sync modes, both extraction paths, shared prevention, Git and executed evidence reach one human report",
+      "status": "passed",
+      "duration_ms": 2283.4,
+      "check_id": "T153"
+    },
+    {
+      "file": "tests/unit/history.test.ts",
+      "name": "history adapters and streaming boundaries HIS-001 reports unsupported data, excludes reasoning/binary, and never changes source",
+      "status": "passed",
+      "duration_ms": 21.09,
+      "check_id": "T154"
+    },
+    {
+      "file": "tests/unit/history.test.ts",
+      "name": "history adapters and streaming boundaries HIS-001 pairs duplicate Codex representations without dropping repeated turns or tool outputs",
+      "status": "passed",
+      "duration_ms": 2.2,
+      "check_id": "T155"
+    },
+    {
+      "file": "tests/unit/history.test.ts",
+      "name": "history adapters and streaming boundaries HIS-001 recognizes sampled Codex runtime records without persisting context snapshots",
+      "status": "passed",
+      "duration_ms": 1.64,
+      "check_id": "T156"
+    },
+    {
+      "file": "tests/unit/history.test.ts",
+      "name": "history adapters and streaming boundaries HIS-001 preserves Claude agent/branch identity and tool content",
+      "status": "passed",
+      "duration_ms": 1.03,
+      "check_id": "T157"
+    },
+    {
+      "file": "tests/unit/history.test.ts",
+      "name": "history adapters and streaming boundaries HIS-006 waits for incomplete JSON and UTF-8, then resumes at an exact byte boundary",
+      "status": "passed",
+      "duration_ms": 4.21,
+      "check_id": "T158"
+    },
+    {
+      "file": "tests/unit/history.test.ts",
+      "name": "history adapters and streaming boundaries HIS-006 distinguishes invalid UTF-8, malformed JSON and bounded oversized-line continuation",
+      "status": "passed",
+      "duration_ms": 3.1,
+      "check_id": "T159"
+    },
+    {
+      "file": "tests/unit/history.test.ts",
+      "name": "history adapters and streaming boundaries HIS-003 bounds Unicode parts, retains context and restores unflushed events",
+      "status": "passed",
+      "duration_ms": 1.81,
+      "check_id": "T160"
+    },
+    {
+      "file": "tests/unit/security.test.ts",
+      "name": "security and bounded normalization canonicalizes idempotency payloads independent of object key ordering",
+      "status": "passed",
+      "duration_ms": 8.76,
+      "check_id": "T161"
+    },
+    {
+      "file": "tests/unit/security.test.ts",
+      "name": "security and bounded normalization retains Chinese bigrams and normalized English tokens",
+      "status": "passed",
+      "duration_ms": 1.78,
+      "check_id": "T162"
+    },
+    {
+      "file": "tests/unit/security.test.ts",
+      "name": "security and bounded normalization redacts known credentials without running historical instructions",
+      "status": "passed",
+      "duration_ms": 0.87,
+      "check_id": "T163"
+    },
+    {
+      "file": "tests/unit/security.test.ts",
+      "name": "security and bounded normalization does not expose raw driver failures",
+      "status": "passed",
+      "duration_ms": 0.54,
+      "check_id": "T164"
+    },
+    {
+      "file": "tests/unit/security.test.ts",
+      "name": "security and bounded normalization initializes safely and never replaces existing configuration",
+      "status": "passed",
+      "duration_ms": 10.28,
+      "check_id": "T165"
+    },
+    {
+      "file": "tests/unit/security.test.ts",
+      "name": "security and bounded normalization archives, hashes and redacts key evidence",
+      "status": "passed",
+      "duration_ms": 11.94,
+      "check_id": "T166"
+    },
+    {
+      "file": "tests/unit/security.test.ts",
+      "name": "security and bounded normalization rejects missing or corrupted managed evidence",
+      "status": "passed",
+      "duration_ms": 9.47,
+      "check_id": "T167"
+    },
+    {
+      "file": "tests/unit/security.test.ts",
+      "name": "security and bounded normalization rejects traversal, oversized files and symlink escapes",
+      "status": "passed",
+      "duration_ms": 10.76,
+      "check_id": "T168"
+    }
+  ]
+}

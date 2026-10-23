@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-22T13:10:06.640Z",
+  "fixture_version": "multi-type-100-v1",
+  "backend": "postgres",
+  "node": "v24.21.0",
+  "platform": "win32",
+  "architecture": "x64",
+  "os_release": "10.0.26200",
+  "cpu": "Intel(R) Core(TM) i7-14700",
+  "logical_cores": 28,
+  "host_memory_bytes": 33954865152,
+  "bugs": 100000,
+  "standards": 100000,
+  "types": 100,
+  "types_per_entity": 2,
+  "selected_types": 2,
+  "seed_ms": 120197.98999999999,
+  "total_ms": 137619.71970000002,
+  "peak_node_rss_bytes": 223555584,
+  "memory_scope": "Node client only; PostgreSQL server/Docker memory not included",
+  "methodology": "Direct batched synthetic seed with revision/type/FTS tables; real Catalog.search pages all matches, 5 repetitions without a forced warmup or OS cache reset, no embedding or remote model; not an ingestion/semantic-quality benchmark",
+  "measurements": [
+    {
+      "kind": "bug",
+      "query": "(type-only)",
+      "total_before_type_filter": 100000,
+      "filtered_distinct_candidates": 4000,
+      "returned_matches": 4000,
+      "page_size": 200,
+      "pages": 20,
+      "repetitions": 5,
+      "total_pagination_ms": [
+        319.33450000001176,
+        256.7456000000093,
+        232.93570000000182,
+        233.4936000000016,
+        254.3478999999934
+      ],
+      "mean_total_pagination_ms": 259.3714600000036
+    },
+    {
+      "kind": "bug",
+      "query": "并发 重试",
+      "total_before_type_filter": 100000,
+      "filtered_distinct_candidates": 4000,
+      "returned_matches": 1000,
+      "page_size": 200,
+      "pages": 5,
+      "repetitions": 5,
+      "total_pagination_ms": [
+        270.76459999999497,
+        258.98880000000645,
+        269.15479999998934,
+        268.1779999999999,
+        227.55029999998806
+      ],
+      "mean_total_pagination_ms": 258.92729999999574
+    },
+    {
+      "kind": "bug",
+      "query": "retry concurrency",
+      "total_before_type_filter": 100000,
+      "filtered_distinct_candidates": 4000,
+      "returned_matches": 1000,
+      "page_size": 200,
+      "pages": 5,
+      "repetitions": 5,
+      "total_pagination_ms": [
+        220.27670000000217,
+        234.33520000000135,
+        216.81010000000242,
+        235.31560000000172,
+        235.9421000000002
+      ],
+      "mean_total_pagination_ms": 228.53594000000157
+    },
+    {
+      "kind": "bug",
+      "query": "缓存 cache",
+      "total_before_type_filter": 100000,
+      "filtered_distinct_candidates": 4000,
+      "returned_matches": 3000,
+      "page_size": 200,
+      "pages": 15,
+      "repetitions": 5,
+      "total_pagination_ms": [
+        403.0191999999952,
+        382.0097000000096,
+        344.7305000000197,
+        359.77979999998934,
+        362.14479999998
+      ],
+      "mean_total_pagination_ms": 370.3367999999988
+    },
+    {
+      "kind": "standard",
+      "query": "(type-only)",
+      "total_before_type_filter": 100000,
+      "filtered_distinct_candidates": 4000,
+      "returned_matches": 4000,
+      "page_size": 200,
+      "pages": 20,
+      "repetitions": 5,
+      "total_pagination_ms": [
+        282.7795000000042,
+        243.75150000001304,
+        262.07709999999497,
+        245.81700000001,
+        229.10250000000815
+      ],
+      "mean_total_pagination_ms": 252.70552000000606
+    },
+    {
+      "kind": "standard",
+      "query": "并发 重试",
+      "total_before_type_filter": 100000,
+      "filtered_distinct_candidates": 4000,
+      "returned_matches": 1000,
+      "page_size": 200,
+      "pages": 5,
+      "repetitions": 5,
+      "total_pagination_ms": [
+        264.98850000000675,
+        313.3419999999751,
+        268.2597999999998,
+        327.24929999999586,
+        280.0809999999765
+      ],
+      "mean_total_pagination_ms": 290.7841199999908
+    },
+    {
+      "kind": "standard",
+      "query": "retry concurrency",
+      "total_before_type_filter": 100000,
+      "filtered_distinct_candidates": 4000,
+      "returned_matches": 1000,
+      "page_size": 200,
+      "pages": 5,
+      "repetitions": 5,
+      "total_pagination_ms": [
+        299.97790000002715,
+        309.9902000000002,
+        380.33739999998943,
+        285.95590000000084,
+        305.4030999999959
+      ],
+      "mean_total_pagination_ms": 316.3329000000027
+    },
+    {
+      "kind": "standard",
+      "query": "缓存 cache",
+      "total_before_type_filter": 100000,
+      "filtered_distinct_candidates": 4000,
+      "returned_matches": 3000,
+      "page_size": 200,
+      "pages": 15,
+      "repetitions": 5,
+      "total_pagination_ms": [
+        353.696100000001,
+        376.18740000002435,
+        374.2062000000151,
+        381.35209999998915,
+        349.1831999999995
+      ],
+      "mean_total_pagination_ms": 366.9250000000058
+    }
+  ]
+}

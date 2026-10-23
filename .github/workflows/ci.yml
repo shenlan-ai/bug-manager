@@ -1,0 +1,62 @@
+name: checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  sqlite:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node: [22, 24]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+      - run: npm ci
+      - run: node scripts/ci-environment.mjs
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm run format:check
+      - run: npm run build
+      - run: npm test -- --reporter=default --reporter=json --outputFile=artifacts/unit.json
+      - run: npm run test:integration -- --reporter=default --reporter=json --outputFile=artifacts/integration.json
+      - run: npm run test:e2e -- --reporter=default --reporter=json --outputFile=artifacts/e2e.json
+      - run: npm run test:package
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: results-${{ matrix.os }}-${{ matrix.node }}
+          path: artifacts/
+          if-no-files-found: ignore
+  postgres:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_PASSWORD: bug-manager-test
+          POSTGRES_DB: bug_manager_test
+        ports: ["5432:5432"]
+        options: --health-cmd pg_isready --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      BUG_MANAGER_TEST_DATABASE_URL: postgresql://postgres:bug-manager-test@127.0.0.1:5432/bug_manager_test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 24, cache: npm }
+      - run: npm ci
+      - run: node scripts/ci-environment.mjs
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm run build
+      - run: npm run test:all -- --reporter=default --reporter=json --outputFile=artifacts/all-tests.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: results-postgres-linux-node24
+          path: artifacts/
+          if-no-files-found: error

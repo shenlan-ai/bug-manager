@@ -1,0 +1,12 @@
+{
+  "package": "bug-manager",
+  "version": "0.1.0",
+  "sha": "27bbb10641e950f5bccbb9960092e4a1641c3dd8",
+  "files": 8,
+  "size_bytes": 202403,
+  "installed_cli": true,
+  "installed_skill": true,
+  "database": "sqlite",
+  "platform": "linux",
+  "node": "v24.21.0"
+}

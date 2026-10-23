@@ -1,0 +1,11 @@
+{
+  "name": "@bug-manager/cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@bug-manager/core": "0.1.0",
+    "@bug-manager/mcp": "0.1.0",
+    "@bug-manager/worker": "0.1.0"
+  }
+}

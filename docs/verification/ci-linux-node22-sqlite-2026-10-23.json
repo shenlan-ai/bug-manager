@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-23T03:44:24.114+08:00",
+  "evidence_kind": "local-replay-of-ci-command-set",
+  "remote_github_actions_executed": false,
+  "runner": {
+    "image": "docker.m.daocloud.io/library/node:22-bookworm-slim",
+    "image_digest": "sha256:de170b39439eb0e5a3444ad7d60b015614a381e10fecae2e30ec9e735122f38d",
+    "platform": "linux",
+    "architecture": "amd64",
+    "debian_release": "bookworm",
+    "node": "v22.23.4",
+    "database": "sqlite"
+  },
+  "source": {
+    "tree_sha256": "418c20ad98a4e3e10d7bec6060eae0489df3609155d112272c3c45051981eb3f",
+    "file_count": 89,
+    "scope": ".github, packages, scripts, skills, tests, package manifests, TypeScript/lint/test configuration and AGENTS.md; generated and local runtime data excluded"
+  },
+  "static_checks": {
+    "typecheck": "passed",
+    "lint": "passed",
+    "format_check": "passed",
+    "build": "passed"
+  },
+  "tests": {
+    "unit": {
+      "files": 3,
+      "passed": 39,
+      "skipped": 20,
+      "failed": 0
+    },
+    "integration": {
+      "files": 13,
+      "passed": 56,
+      "skipped": 51,
+      "failed": 0
+    },
+    "e2e": {
+      "files": 4,
+      "passed": 5,
+      "skipped": 2,
+      "failed": 0
+    }
+  },
+  "package_smoke": {
+    "status": "passed",
+    "package": "bug-manager",
+    "version": "0.1.0",
+    "sha1": "ae5558de76affd325ca98c2d9e9dc65dd35d48a0",
+    "files": 8,
+    "size_bytes": 203776,
+    "installed_cli": true,
+    "installed_skill": true,
+    "started_mcp": true,
+    "started_worker": true,
+    "worker_pending_segments": 1,
+    "database": "sqlite",
+    "node": "v22.23.4"
+  },
+  "command_exit_status": 0,
+  "note": "This replay validates that the repository CI commands, including the split Vitest jobs and package smoke test, can execute successfully on a Linux Node 22 container. Remote GitHub Actions, macOS and Windows CI service execution remain unverified by this record. The run used a clean source copy without node_modules, dist, tsbuildinfo or prior artifacts."
+}

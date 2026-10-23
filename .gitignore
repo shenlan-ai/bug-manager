@@ -1,0 +1,56 @@
+# dependencies and build output
+node_modules/
+dist/
+packages/*/dist/
+build/
+coverage/
+*.tsbuildinfo
+.eslintcache
+
+# test and tool output
+artifacts/
+reports/
+test-results/
+playwright-report/
+tmp/
+temp/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# bug-manager runtime data
+.bug-manager-local/
+**/.bug-manager-local/
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.duckdb
+
+# local configuration and secrets
+.env
+.env.*
+!.env.example
+.npmrc
+.yarnrc
+.yarnrc.yml
+.claude/settings.local.json
+.codex/*.local.json
+*.pem
+*.key
+*.p12
+*.pfx
+
+# editor and operating-system metadata
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# package and archive artifacts
+*.tgz
+*.tar.gz

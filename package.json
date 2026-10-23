@@ -1,0 +1,75 @@
+{
+  "name": "bug-manager",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Type-scoped bug prevention knowledge and agent acceptance reports",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shenlan-ai/bug-manager.git"
+  },
+  "homepage": "https://github.com/shenlan-ai/bug-manager#readme",
+  "bugs": {
+    "url": "https://github.com/shenlan-ai/bug-manager/issues"
+  },
+  "author": "Shenlan contributors",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "bin": {
+    "bug-manager": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "skills/bug-manager",
+    "README.md",
+    "docs/usage.md",
+    "docs/operations.md"
+  ],
+  "scripts": {
+    "build": "tsc -b && node scripts/build.mjs",
+    "typecheck": "tsc -b --pretty false && tsc -p tsconfig.test.json --pretty false",
+    "lint": "eslint packages tests scripts --max-warnings 0",
+    "test": "vitest run tests/unit tests/contracts",
+    "test:integration": "vitest run tests/integration",
+    "test:e2e": "vitest run tests/e2e",
+    "test:all": "vitest run",
+    "test:pg": "node scripts/test-postgres.mjs",
+    "format": "prettier --write packages tests scripts *.json *.ts eslint.config.js .github/workflows/ci.yml",
+    "format:check": "prettier --check packages tests scripts *.json *.ts eslint.config.js .github/workflows/ci.yml",
+    "test:package": "node scripts/test-package.mjs",
+    "verify:codex-skill": "node scripts/verify-codex-skill.mjs",
+    "benchmark:retrieval": "node scripts/benchmark-retrieval.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "better-sqlite3": "^13.0.3",
+    "chokidar": "^4.0.3",
+    "commander": "^14.0.3",
+    "env-paths": "^3.0.0",
+    "kysely": "^0.28.11",
+    "minimatch": "^10.2.6",
+    "pg": "^8.18.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^22.19.11",
+    "@types/pg": "^8.16.0",
+    "esbuild": "^0.28.2",
+    "eslint": "^9.39.2",
+    "prettier": "^3.9.10",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.56.0",
+    "vitest": "^4.0.18"
+  },
+  "allowScripts": {
+    "better-sqlite3@13.0.3": true,
+    "esbuild@0.28.2": true
+  }
+}

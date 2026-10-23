@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-22T13:32:17.980Z",
+  "adapter": "codex",
+  "client_version": "0.162.0-alpha.17.2",
+  "source_bytes": 574881,
+  "records": 85,
+  "events": 24,
+  "record_types": {
+    "session_meta": 1,
+    "event_msg": 37,
+    "response_item": 35,
+    "world_state": 1,
+    "turn_context": 1,
+    "token_usage_record": 10
+  },
+  "coverage": {
+    "metadata": 49,
+    "excluded": 12,
+    "recognized": 24
+  },
+  "roles": {
+    "user": 2,
+    "assistant": 2,
+    "tool": 20
+  },
+  "warnings": {},
+  "issues": {},
+  "source_unchanged": true,
+  "declared_session_identity": true,
+  "status": "passed_textual_sample",
+  "limitation": "Local text/metadata sample verification only; excludes runtime snapshots, reasoning and binary content. Not a claim about every client feature or version."
+}

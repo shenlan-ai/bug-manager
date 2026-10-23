@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-22T14:55:37.052Z",
+  "codex_version": "codex-cli 0.163.0-alpha.10.2",
+  "platform": "win32",
+  "architecture": "x64",
+  "node": "v24.21.0",
+  "checks": {
+    "install_status": "installed",
+    "canonical_skill_hash_matches": true,
+    "protocol_reference_installed": true,
+    "discovered_in_model_visible_prompt": true,
+    "skill_name": "bug-manager",
+    "skill_entry_path": "bug-manager/SKILL.md",
+    "model_requests": 0
+  },
+  "method": "Codex debug prompt-input renders the local model-visible prompt without contacting a model. The temporary Skill was installed through the packaged CLI source and removed after verification."
+}
